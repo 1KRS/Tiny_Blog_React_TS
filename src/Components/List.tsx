@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-// import { db } from '../mock-db';
 // import Article from './Article';
 import axios from 'axios';
 import { Data } from '../interfaces';
@@ -32,10 +31,7 @@ const List = ( {tag}: ITag ) => {
   }, [])
 
   const articles = data.posts.filter(a => a.tags.includes(tag.toLowerCase()))
-  console.log('tag:', tag);
-  console.log('Articles:', articles);
 
- 
   return (
     <div className='accordion'>
             {articles.map((article, i) => (

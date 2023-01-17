@@ -1,12 +1,9 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './App.css';
 import List from './Components/List';
 import './mock-db';
 // import { db } from './mock-db';
-
-// const data = db;
-// console.log('data', data);
 
 const tags = [
   'History',
