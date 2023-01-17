@@ -52,24 +52,3 @@ const App: React.FC = () => {
 }
 
 export default App ;
-
-
-  {/* <div className='App">
-        <Button
-          isActive={activeUser}
-          handleClick={onClickHandler} />
-        {loading ?
-          <h3>Φορτώνει...</h3> :
-          <main>
-            <div>
-              <UserPicture user={user} />
-            </div>
-         
-            <div className='app__name'>
-              <UserName user={user} />
-            </div>
-            <UserAge user={user} />
-            <UserAddress user={user} />
-
-          </main>}
-      </div> */}
