@@ -1,7 +1,15 @@
-export interface User {
-  picture: '',
-  name: string,
-  surname: string,
-  age: string|'',
-  address: string
+interface Post {
+  id: number,
+  body: string,
+  tags: string[],
+  reactions: number,
+  title: string
+  userId: number,
+}
+
+export interface Data {
+  posts: Post[],
+  total: number,
+  skip: number,
+  limit: number
 }
