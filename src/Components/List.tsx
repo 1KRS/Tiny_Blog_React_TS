@@ -2,9 +2,14 @@ import React from 'react'
 import { db } from '../mock-db';
 import Article from './Article';
 
-function List() {
+interface ITag {
+  tag: string;
+}
+
+const List = ( {tag}: ITag ) => {
   const data = db.posts;
-  const articles = data.filter(a => a.tags.includes('mystery'))
+  const articles = data.filter(a => a.tags.includes(tag.toLowerCase()))
+  console.log('tag:', tag);
   console.log('Articles:', articles);
 
   return (

@@ -21,7 +21,7 @@ import { db } from './mock-db';
 // }, [meal.id])
  
 const data = db;
-console.log(data);
+console.log('data', data);
 
 const tags = [
   'History',
@@ -43,7 +43,7 @@ const App: React.FC = () => {
     setSelected(i);
   }  
   return (
-    <body className='App'>
+    <div className='App'>
 
       <header className='App-header'>
         <h1>Tiny Blog</h1>
@@ -53,20 +53,20 @@ const App: React.FC = () => {
         <div className='wraper'>
           <div className='accordion'>
             {tags.map((tag, i) => (
-              <section className='section'>
+              <section className='section' key={i}>
                 <div className='section-header' onClick={() => toggle(i)}>
                   <h2>{tag}</h2>
                   <span>{selected === i ? '-' : '+'}</span>
                 </div>
                 <div className={selected === i ? 'section-list show' : 'section-list'}>
-                  <List />
-                  {/* <h5>Λαλα</h5> */}
+                  <List tag={tag} />
                 </div>
-              </section>))} 
+              </section>
+            ))}
           </div>
         </div>
       </main>
-    </body>
+    </div>
   );
 }
 
