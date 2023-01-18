@@ -37,6 +37,8 @@
 .section {
   margin-bottom: 5px;
   padding: 10px 20px;
+  border: 1px solid white;
+  border-radius: 25px;
 }
 
 .section-header {
@@ -58,6 +60,12 @@
   transition: all 0.5s cubic-bezier(1,0,1,0);
 }
 
-.article-title {
-  font-size: 14px;
+.article {
+  padding-bottom: 25px;
+  border-top: 1px solid white;
 }
+
+.article-title {
+  font-size: 25px;
+}
+
