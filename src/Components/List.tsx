@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
-// import Article from './Article';
+import Article from './Article';
 import axios from 'axios';
 import { Data } from '../interfaces';
 
-interface ITag {
+interface ITagProps {
   tag: string;
 }
 
-const List = ( {tag}: ITag ) => {
+const List = ( {tag}: ITagProps ) => {
 
   const [data, setData] = useState<Data>({
     posts: [],
@@ -30,21 +30,15 @@ const List = ( {tag}: ITag ) => {
   }, [])
 
   const articles = data.posts.filter(a => a.tags.includes(tag.toLowerCase()))
-  console.log(`Articles for ${tag}`, articles);
+  // console.log(`Articles for ${tag}`, articles);
+  // console.log(`Tags for ${articles[0].title}`, articles[0].tags);
+  
   return (
     <div className='accordion'>
-            {articles.map((article, i) => (
-              <article className='article' key={i}>
-                <h4>{article.title}</h4>
-                <div>
-                  {article.body}
-                </div>
-                
-                {/* <div className='section-list'>
-                  <Article />
-                </div> */}
-              </article>))} 
-          </div>
+      {articles.map((article, i) => (
+        <Article article={article} key={i}/>
+      ))}
+    </div>
   )
 }
 

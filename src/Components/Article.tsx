@@ -1,20 +1,26 @@
 import React from 'react'
+import { Post } from '../interfaces';
 
-interface articleProps {
-  id: number;
-  title: string;
-  body: string;
-  userId: number;
-  tags: string[];
-  reactions: number;
+interface IArticleProps {
+  article: Post
 }
 
-const Article = ( ) => {
-  return (
-    <div>Article</div>
+const Article = ( {article}: IArticleProps ) => {
+  return ( 
+    <article className='article'>
+      <h4>{article.title}</h4>
+      <div>
+        {article.body}
+      </div>
+      {/* <div>
+        {article.tags.map(e) ={'>'} (
+          <div className='tagNames'>
+            {e}
+          </div>
+        )}
+      </div> */}
+    </article>
   )
 }
 
 export default Article
-
-//{ article }: articleProps
