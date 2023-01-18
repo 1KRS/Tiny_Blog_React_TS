@@ -30,8 +30,6 @@ const List = ( {tag}: ITagProps ) => {
   }, [])
 
   const articles = data.posts.filter(a => a.tags.includes(tag.toLowerCase()))
-  // console.log(`Articles for ${tag}`, articles);
-  // console.log(`Tags for ${articles[0].title}`, articles[0].tags);
   
   return (
     <div className='accordion'>
