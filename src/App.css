@@ -5,10 +5,21 @@
 
 .App-header {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  height: 200px;
+  align-items: center;
+  height: 350px;
   font-size: 30px;
   color: white;
+  /* border: 1px solid white; */
+}
+
+.blog-img {
+  width: 900px;
+  height: 185px;
+  z-index: 0;
+  border: 1px solid white;
+  border-radius: 25px;
 }
 
 .App-body {
@@ -16,7 +27,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: top;
-  /* margin: 300px; */
+  margin: 25px;
   height: 100%;
   text-align: center;
   font-size: 18px;

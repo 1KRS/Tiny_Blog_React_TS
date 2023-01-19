@@ -1,7 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
-import './App.css';
 import List from './Components/List';
+import blog from './blog.jpg';
+import './App.css';
 import './mock-db';
 // import { db } from './mock-db';
 
@@ -28,7 +29,7 @@ const App: React.FC = () => {
     <div className='App'>
       <header className='App-header'>
         <h1>Tiny Blog</h1>
-        {/* <img src='https://www.freepik.com/premium-photo/abstract-painting-color-texture-modern-futuristic-pattern-loseup-painting-colorful-background_31473598.htm#&position=12&from_view=popular' alt='#'></img> */}
+        <img src={blog} className='blog-img' alt='blog-img' />
       </header>
       <main className='App-body'>
         <div className='wraper'>
