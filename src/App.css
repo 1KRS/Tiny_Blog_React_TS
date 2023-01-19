@@ -11,12 +11,11 @@
   height: 350px;
   font-size: 30px;
   color: white;
-  /* border: 1px solid white; */
 }
 
 .blog-img {
   width: 900px;
-  height: 185px;
+  height: 200px;
   z-index: 0;
   border: 1px solid white;
   border-radius: 25px;

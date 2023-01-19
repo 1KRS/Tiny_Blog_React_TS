@@ -4,7 +4,6 @@ interface IArticleProps {
   article: Post
 }
 
-
 const Article = ( {article}: IArticleProps ) => {
   const tags = article.tags;
   console.log(tags);

@@ -4,7 +4,6 @@ import List from './Components/List';
 import blog from './blog.jpg';
 import './App.css';
 import './mock-db';
-// import { db } from './mock-db';
 
 const tags = [
   'History',
