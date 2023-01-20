@@ -15,13 +15,14 @@ const tags = [
 
 const App: React.FC = () => {
   
-  const [selected, setSelected] = useState<number>(0)
+  const [selected, setSelected] = useState<number | null>(null)
 
   const toggle = (i: number) => {
     if (selected === i) {
-      setSelected(0);
+      setSelected(null);
+    } else {
+      setSelected(i);
     }
-    setSelected(i);
   }  
 
   return (

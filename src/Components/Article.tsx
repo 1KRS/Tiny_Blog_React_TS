@@ -6,8 +6,6 @@ interface IArticleProps {
 
 const Article = ( {article}: IArticleProps ) => {
   const tags = article.tags;
-  console.log(tags);
-
   return ( 
     <article className='article'>
       <h4 className='article-title'>{article.title}</h4>
